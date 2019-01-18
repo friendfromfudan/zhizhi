@@ -1,10 +1,16 @@
 #/usr/bin/env python3
 import urllib.request
 import os
+import csv
+
+#打开文件，追加a
+out = open('/Users/youpeng/study/practice/doctor.csv','a', newline='')
+#设定写入模式
+csv_write = csv.writer(out,dialect='excel')
 
 def open_page(url):
     req=urllib.request.Request(url)
-    req.add_header('User','Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0')
+    # req.add_header('User','Mozilla/5.0 (Windows NT 6.1; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0')
     response=urllib.request.urlopen(url)
     html=response.read()
     return html
