@@ -1,0 +1,32 @@
+{
+    "pages": [
+        "pages/index/index",
+        "pages/user/user",
+        "pages/photos/add",
+        "pages/photos/photos",
+        "pages/album/add"
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#771530",
+        "navigationBarTitleText": "WeChat",
+        "navigationBarTextStyle": "white"
+    },
+    "tabBar": {
+        "position": "top",
+        "selectedColor": "#fdc21c",
+        "list": [
+            {
+                "pagePath": "pages/index/index",
+                "text": "衣服"
+            }
+            ,
+            {
+                "pagePath": "pages/user/user",
+                "text": "用户"
+            }
+        ]
+    },
+    "cloud": true,
+    "disableScroll": true
+}
