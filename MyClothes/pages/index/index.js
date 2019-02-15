@@ -29,12 +29,13 @@ Page({
         // user collection 设置权限为仅创建者及管理员可读写
         // 这样除了管理员之外，其它用户只能读取到自己的用户信息
         const user = await db.collection('user').get()
+        console.log(user)
 
-        // 如果没有用户，跳转到登录页面登录
+        // 如果没有用户，跳转到登页面登录
         if (!user.data.length) {
             app.globalData.hasUser = false
 
-            return wx.switchTab({ url: '/pages/user/user' })
+          return wx.navigateTo({ url: '../user/user' })
         }
 
         const userinfo = user.data[0]

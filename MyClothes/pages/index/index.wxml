@@ -5,7 +5,16 @@
     <navigator url="/pages/photos/photos?id={{idx}}">
     <view class="album {{idx%2==0?'album-left':'album-right'}}">
       <view class='first-photo'>
-        <view style="background-image: url({{album.coverURL}})"></view>
+        <!-- <view style="background-image: url({{album.coverURL}})"></view> -->
+       
+         <image class='album_image'
+                  mode="aspectFit"
+          src="{{album.coverURL}}"
+        ></image>
+        
+       
+
+
       </view>
       <view class='album-info'>
           <view class="name">{{album.albumName}}</view>

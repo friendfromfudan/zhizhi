@@ -3,14 +3,22 @@ page {
   background: #F2F2F2
 }
 
+.album_image{
+
+  width: 200rpx;
+  height: 120rpx; 
+  background-color: #ffffff;
+  
+}
+
 .albums {
-  padding: 24rpx;
+  padding: 20rpx;
   font-size: 32rpx;
 }
 
 .albums .album {
-  margin-bottom: 24rpx;
-  padding: 24rpxx;
+  margin-bottom: 20rpx;
+  padding: 20rpxx;
   /* background: #ffffff; */
   position: relative;
   width: 350rpx;
@@ -28,12 +36,21 @@ page {
 .first-photo {
   width: 350rpx;
   height: 250rpx;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
   background-color: #fff;
 }
 
 .first-photo view {
   width:100%;
   height:100%;
+  /* display: flex;
+  justify-content: center;
+  margin: 0 auto; */
+  /* margin-left: 40rpx; */
+  /* margin-top: 40rpx; */
   background-size: contain;
   background-position: 50%;
   background-repeat: no-repeat;
@@ -150,8 +167,8 @@ page {
 .options .add-item {
   display: block;
   margin: 0 auto;
-  width: 127rpx;
-  height: 151rpx;  
+  width: 392rpx;
+  height: 83rpx;  
 }
 
 .close-item {

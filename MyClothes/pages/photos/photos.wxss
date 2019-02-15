@@ -123,8 +123,9 @@
     left: 0;
 }
 .options .add-item{
+    width: 392rpx;
+    height: 83rpx;  
     display: block;
     margin: 0 auto;
-    width: 143rpx;
-    height: 164rpx;
+  
 }
