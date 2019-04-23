@@ -1,0 +1,15 @@
+{
+  "pages": [
+    "pages/user/user",
+    "pages/index/index",
+    "pages/list/list"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#39b54a",
+    "navigationBarTitleText": "Color UI",
+    "navigationStyle": "custom",
+    "navigationBarTextStyle": "white"
+  },
+ "usingComponents": {},
+  "cloud": true
+}

@@ -1,0 +1,13 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/step1/step1"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#DC2B6A",
+    "navigationBarTitleText": "乳腺癌复发风险评估",
+    "navigationBarTextStyle": "white"
+  }
+}

@@ -1,0 +1,110 @@
+<!--pages/step1/step1.wxml-->
+
+<view class='step_container'>
+
+<view class='item_tag'> 
+
+<view class='tag'>选项</view>
+
+<view class='tag'>分值</view>
+</view>
+
+<radio-group bindchange="radioChange1">
+<view class='item_choose'>
+
+
+
+<view style='font-size: 32rpx;width:350rpx' >年龄因素（周岁）</view>
+
+
+<view style='display: flex;flex-direction:column;'>
+
+<radio class="radio" wx:for-items="{{items1}}" wx:key="name" value="{{item.name}}" checked="{{item.checked}}">
+<view style='display: flex;flex-direction:row;'>
+
+
+  <view style='width: 140rpx'>
+                  <text style="font-size: 32rpx;">{{item.value}}</text>
+                  </view>
+                  
+                  <text style='font-size: 32rpx;'>{{item.score}}</text>
+                  
+</view>
+              
+</radio>
+
+</view>
+
+</view>
+
+</radio-group>
+
+<view class="divLine"></view>
+
+<radio-group bindchange="radioChange2">
+<view class='item_choose'>
+<view style='font-size: 32rpx;width:350rpx' >淋巴瘤转移（个）</view>
+
+
+<view style='display: flex;flex-direction:column;'>
+
+<radio class="radio" wx:for-items="{{items2}}" wx:key="name" value="{{item.name}}" checked="{{item.checked}}">
+<view style='display: flex;flex-direction:row;'>
+
+
+  <view style='width: 140rpx'>
+                  <text style="font-size: 32rpx;">{{item.value}}</text>
+                  </view>
+                  
+                  <text style='font-size: 32rpx;'>{{item.score}}</text>
+                  
+</view>
+              
+</radio>
+
+</view>
+
+</view>
+</radio-group>
+
+<view class="divLine"></view>
+
+
+<radio-group bindchange="radioChange3">
+<view class='item_choose'>
+<view style='font-size: 32rpx;width:350rpx' >肿瘤大小（cm）</view>
+
+
+<view style='display: flex;flex-direction:column;'>
+
+<radio class="radio" wx:for-items="{{items3}}" wx:key="name" value="{{item.name}}" checked="{{item.checked}}">
+<view style='display: flex;flex-direction:row;'>
+
+
+  <view style='width: 140rpx'>
+                  <text style="font-size: 32rpx;">{{item.value}}</text>
+                  </view>
+                  
+                  <text style='font-size: 32rpx;'>{{item.score}}</text>
+                  
+</view>
+              
+</radio>
+
+</view>
+
+</view>
+</radio-group>
+<view class="divLine"></view>
+
+<view>
+<text>当前评分结果</text>
+<text class='score'>{{score1}}</text>
+<text>分</text>
+</view>
+
+</view>
+
+
+
+

@@ -1,0 +1,71 @@
+
+
+
+.cu-bar .content image{
+  height: 60rpx;
+  width: 240rpx;
+}
+
+.cardTitle{
+  color: #fff;
+  padding: 90rpx 60rpx;
+  font-size: 40rpx;
+  font-weight: 300;
+  transform: skew(-10deg, 0deg);
+  position: relative;
+  text-shadow: 0px 0px 6rpx rgba(0,0,0,0.3)
+}
+
+.cardTitle::before{
+  content: "";
+  position: absolute;
+  width: 60rpx;
+  height: 6rpx;
+  border-radius: 20rpx;
+  background-color: #fff;
+  display: block;
+  top: 60rpx;
+  left: 50rpx;  
+  transform: skew(10deg, 0deg);
+}
+.cardTitle::after{
+  content: "";
+  position: absolute;
+  width: 140rpx;
+  border-radius: 6rpx;
+  height: 24rpx;
+  background-color: #fff;
+  display: block;
+  bottom: 76rpx;
+  left: 90rpx;  
+  transform: skew(10deg, 0deg);
+  opacity: 0.1;
+}
+
+
+
+.recommend {
+  text-align: center;
+  height: 50rpx;
+  margin-top: 10rpx;
+  margin:0;
+}
+
+.recommend-title {
+  display: table;
+  width: 100%;
+  margin:0;
+  line-height: 50rpx;
+  white-space: nowrap;
+  border-spacing: 2rem 0;
+  font-size: 30rpx;
+  color: gray
+}
+
+.recommend-title::before, .recommend-title::after {
+  display: table-cell;
+  content: "";
+  width: 250rem;
+  background: linear-gradient(rgb(19, 18, 18), rgb(19, 18, 18)) repeat-x center;
+  background-size: 0.1rem 0.1rem;
+}

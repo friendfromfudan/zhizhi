@@ -8,7 +8,24 @@
 import scrapy
 
 
-class WeibospiderItem(scrapy.Item):
-    # define the fields for your item here like:
-    # name = scrapy.Field()
+class UserItem(scrapy.Item):
+    collection = 'users'
+    id = scrapy.Field()
+    name = scrapy.Field()
+    avatar = scrapy.Field()
+    cover = scrapy.Field()
+    gender = scrapy.Field()
+    description = scrapy.Field()
+    fans_count = scrapy.Field()
+    follows_count = scrapy.Field()
+    weibos_count = scrapy.Field()
+    verified = scrapy.Field()
+    verified_reason = scrapy.Field()
+    verified_type = scrapy.Field()
+    follows = scrapy.Field()
+    fans = scrapy.Field()
+    crawled_at = scrapy.Field()
+
+
+
     pass

@@ -1,0 +1,21 @@
+<!--pages/list/list.wxml-->
+
+<view class="cu-custom" style="height:{{CustomBar}}px;">
+  <view class="cu-bar fixed bg-gradual-blue" style="height:{{CustomBar}}px;padding-top:{{StatusBar}}px;">
+    <navigator class='action' open-type="navigateBack" delta="1" hover-class="none">
+      <text class='icon-back'></text> 返回
+    </navigator>
+  
+  </view>
+</view>
+
+
+<button  bindtap='toCheck'>打卡</button>
+<view>123</view>
+
+<view wx:for="{{list}}" wx:key>
+<text>12{{item._id}}</text>
+</view>
+
+
+<image bindtap='changeBigImg'  src='{{bigImg}}'></image>
