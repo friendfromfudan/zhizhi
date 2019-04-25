@@ -11,6 +11,8 @@
 	"appid": "wx865490c628172a1f",
 	"projectname": "riskassessment",
 	"libVersion": "2.2.5",
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
 	"condition": {
 		"search": {
 			"current": -1,
