@@ -99,7 +99,7 @@
 
 <view>
 <text>当前评分结果</text>
-<text class='score'>{{score1}}</text>
+<text class='score'>{{sum_socre}}</text>
 <text>分</text>
 </view>
 

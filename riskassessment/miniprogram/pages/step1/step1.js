@@ -7,8 +7,11 @@ Page({
   data: {
     sum_socre:0,
     score1:0,
+    statu1:0,
     score2:0,
+    statu2:0,
     score3:0,
+    statu3:0,
     items1: [
       { name: 'no1', value: '<35', score:'0.81'},
       { name: 'no2', value: '35-39', score: '0.54' },
@@ -17,12 +20,12 @@ Page({
       { name: 'no5', value: '≥50', score: '0.16' },
     ] ,
     items2: [
-      { name: 'n06', value: '0', score: '0' },
+      { name: 'no6', value: '0', score: '0' },
       { name: 'no7', value: '1-3', score: '0.38' },
       { name: 'no8', value: '≥4', score: '1.2' },
     ] ,
     items3:[
-      { name: 'n09', value: '未知', score: '0.61' },
+      { name: 'no9', value: '未知', score: '0.61' },
       { name: 'no10', value: '≤', score: '0' },
       { name: 'no11', value: '>2', score: '0.42' },
 
@@ -31,49 +34,106 @@ Page({
 
   },
   radioChange1: function (e) {
-    
-    switch (e.detail.value){
-      case "no1": 
-        let sum;
-        sum = this.data.score1 + this.data.score2 + this.data.score3;
-        this.setData({
-          score1:0.81,
-          sum_socre:sum,
-        });
-        break;
-      case "no2":
-        this.setData({
-          score1: 0.54
-        });
-        break;
-      case "no3":
-        this.setData({
-          score1: 0.23
-        });
-        break;
-      case "no4":
-        this.setData({
-          score1: 0
-        });
-        break;
-      case "no5":
-        this.setData({
-          score1: 0.16
-        }); 
-        break;
+      switch (e.detail.value) {
+        case "no1":
+          this.setData({
+            score1: 81,
 
-      default:
-        console.log("default");
+          });
+          break;
+        case "no2":
+          this.setData({
+            score1: 54
+          });
+          break;
+        case "no3":
+          this.setData({
+            score1: 23
+          });
+          break;
+        case "no4":
+          this.setData({
+            score1: 0
+          });
+          break;
+        case "no5":
+          this.setData({
+            score1: 16
+          });
+          break;
 
-
-    }
-
-
+        default:
+          console.log("default");
+      }
+      let sum = (this.data.score1 + this.data.score2 + this.data.score3)/100;
+      console.log(sum);
+      this.setData({
+        sum_socre: sum,
+        statu1: 1,
+      })   
+    if ((this.data.statu1 + this.data.statu2 + this.data.statu3) == 3) {
+      wx.navigateTo({
+        url: '/pages/step2/step2',
+      })
+    } 
   },
   radioChange2: function (e) {
-    
+
+    console.log(e);
+    switch (e.detail.value) {
+      case "no6":
+        this.setData({
+          score2: 0,
+        });
+        break;
+      case "no7":
+        this.setData({
+          score2: 38
+        });
+        break;
+      case "no8":
+        this.setData({
+          score2: 120
+        });
+        break;
+      default:
+        console.log("default2");
+    }
+    console.log(this.data.score2);
+    let sum = (this.data.score1+this.data.score2+this.data.score3)/100;
+    this.setData({
+      sum_socre: sum,
+      statu2:1,
+    })
   },
   radioChange3: function (e) {
+
+    console.log(e);
+    switch (e.detail.value) {
+      case "no9":
+        this.setData({
+          score3: 61,
+        });
+        break;
+      case "no10":
+        this.setData({
+          score2: 0,
+        });
+        break;
+      case "no11":
+        this.setData({
+          score2: 42
+        });
+        break;
+      default:
+        console.log("default3");
+    }
+    console.log(this.data.score3);
+    let sum = (this.data.score1 + this.data.score2 + this.data.score3)/100;
+    this.setData({
+      sum_socre: sum,
+      statu3: 1,
+    })
     
   },
 
